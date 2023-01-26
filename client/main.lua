@@ -2,23 +2,20 @@ local BANK = {
     Data = {}
 }
 
-local activeBlips, bankPoints, atmPoints, markerPoints = {}, {}, {}, {}
-local playerLoaded, uiActive, inMenu = false, false, false
+local activeBlips, atmPoints, markerPoints = {}, {}, {}, {}
+local uiActive, inMenu = false, false, false
 
 --Functions
     -- General data collecting thread
     function BANK:Thread()
         self:CreateBlips()
         local data = self.Data
-        data.ped = PlayerPedId()
-        data.coord = GetEntityCoords(data.Ped)
-        playerLoaded = true
 
-        CreateThread(function ()
-            while playerLoaded do
+        CreateThread(function()
+            while ESX.PlayerLoaded do
+                data.ped = ESX.PlayerData.ped
                 data.coord = GetEntityCoords(data.ped)
-                data.ped = PlayerPedId()
-                bankPoints, atmPoints, markerPoints = {}, {}, {}
+                atmPoints = {}
 
                 if (IsPedOnFoot(data.ped) and not ESX.PlayerData.dead) and not inMenu then
                     for i = 1, #Config.AtmModels do
@@ -27,64 +24,34 @@ local playerLoaded, uiActive, inMenu = false, false, false
                             atmPoints[#atmPoints+1] = GetEntityCoords(atm)
                         end
                     end
-
-                    for i = 1, #Config.Banks do
-                        local bankDistance = #(data.coord - Config.Banks[i].Position.xyz)
-                        if bankDistance <= 0.7 then
-                            bankPoints[#bankPoints+1] = Config.Banks[i].Position.xyz
-                        end
-                        if Config.ShowMarker and bankDistance <= (Config.DrawMarker or 10) then
-                            markerPoints[#markerPoints+1] = Config.Banks[i].Position.xyz
-                        end
-                    end
-                end
-
-                if next(bankPoints) and not uiActive then
-                    self:TextUi(true)
                 end
 
                 if next(atmPoints) and not uiActive then
                     self:TextUi(true, true)
                 end
-
-                if not next(bankPoints) and not next(atmPoints) and uiActive then
+        
+                if not next(atmPoints) and uiActive then
                     self:TextUi(false)
                 end
-
+                                
                 Wait(1000)
             end
         end)
 
-        if not Config.ShowMarker then return end
-
         CreateThread(function()
-            local wait = 1000
-            while playerLoaded do
-                if next(markerPoints) then
-                    for i = 1, #markerPoints do
-                        DrawMarker(20, markerPoints[i].x, markerPoints[i].y, markerPoints[i].z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.3, 0.2, 0.2, 187, 255, 0, 255, false, true, 2, false, nil, nil, false)
+            for i = 1, #Config.Banks do
+                ESX.CreateMarker("bank"..i, Config.Banks[i].Position.xyz, Config.DrawMarker, TranslateCap("press_e_banking"), {
+                drawMarker = Config.ShowMarker,
+                key = 38,
+                scale = {x = 0.5, y = 0.5, z = 0.5}, -- Scale of the marker
+                sprite = 20, -- type of the marker
+                colour = {r = 50, g = 200, b = 50, a = 200} -- R, G, B, A, colour system
+                }, function()
+                    if not uiActive then
+                        self:HandleUi(true)
+                        ESX.HideUI()
                     end
-                    wait = 0
-                end
-                Wait(wait)
-            end
-        end)
-    end
-
-    -- Handle text ui / Keypress
-    function BANK:TextUi(state, atm)
-        uiActive = state
-        if not state then
-            return ESX.HideUI()
-        end
-        ESX.TextUI(TranslateCap('press_e_banking'))
-        CreateThread(function()
-            while uiActive do
-                if IsControlJustReleased(0, 38) then
-                    self:HandleUi(true, atm)
-                    self:TextUi(false)
-                end
-                Wait(0)
+                end)
             end
         end)
     end
@@ -109,6 +76,23 @@ local playerLoaded, uiActive, inMenu = false, false, false
         end
 
         activeBlips = tmpActiveBlips
+    end
+
+    function BANK:TextUi(state, atm)
+        uiActive = state
+        if not state then
+            return ESX.HideUI()
+        end
+        ESX.TextUI(TranslateCap('press_e_banking'))
+        CreateThread(function()
+            while uiActive do
+                if IsControlJustReleased(0, 38) then
+                    self:HandleUi(true, atm)
+                    self:TextUi(false)
+                end
+            Wait(0)
+            end
+        end)
     end
 
     -- Remove blips
@@ -209,19 +193,11 @@ end)
         BANK:Thread()
     end)
 
-    -- Disable the script on player logout
-    RegisterNetEvent('esx:onPlayerLogout', function()
-        playerLoaded = false
-    end)
-
     -- Resource stopping
     AddEventHandler('onResourceStop', function(resource)
         if resource ~= GetCurrentResourceName() then return end
         BANK:RemoveBlips()
-        if uiActive then BANK:TextUi(false) end
     end)
-
-    RegisterNetEvent('esx:onPlayerDeath', function() BANK:TextUi(false) end)
 
 -- Nui Callbacks
 RegisterNUICallback('close', function(data, cb)
