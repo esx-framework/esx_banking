@@ -1,5 +1,5 @@
 Locales['nl'] = {
-  ['invalid_amount'] = 'Ongeldigd bedrag',
+  ['invalid_amount'] = 'Ongeldig bedrag',
   ['deposit_money']  = 'Je hebt €%s gestort',
   ['withdraw_money'] = 'Je hebt €%s opgenomen',
   ['pincode_money'] = 'Je nieuwe pincode is %s',
