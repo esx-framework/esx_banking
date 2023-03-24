@@ -10,7 +10,7 @@ Locales['sl'] = {
   ['banking_blip']       = 'Banka',
   ['cant_do_it']       = "Nemorem Storiti!",
   ['not_enough_money'] = "Ni dovolj denarja! Vi potrebujete %s denarja!",
-  ['pincode_not_found'] = "Napacna PIN Koda",
+  ['pincode_not_found'] = "Napacna PIN Koda!",
   ['pincode_found'] = "Pravilna PIN Koda...",
   ['bank_name'] = "NLB Banka"
 }
