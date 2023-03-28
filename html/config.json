@@ -485,5 +485,102 @@
         "tableFullLanguage": "French"
       }
     }
+  },
+    "SC": {
+    "DYNAMIC_FORM_DATA": [
+      {
+        "componentName": "moreGraph",
+        "elementID": "#wrapper",
+        "title": "",
+        "closeButtonText": "关闭 ❌",
+        "bankTitle": "花园银行",
+        "mainExitButtonText": "注销"
+      },
+      {
+        "elementID": "#cpincode",
+        "name": "cpincode",
+        "buttonText": "验证密码",
+        "inputPlaceholder": "请输入4位数字的密码...",
+        "title": "修改PIN密码",
+        "description": "在这里您可以编辑/更改您的密码.",
+        "type": "password"
+      },
+      {
+        "elementID": "#withdraw",
+        "name": "withdraw",
+        "buttonText": "确认",
+        "inputPlaceholder": "金额数量",
+        "title": "提现",
+        "description": "在这里您可以从银行取款.",
+        "type": "number"
+      },
+      {
+        "elementID": "#deposit",
+        "name": "deposit",
+        "buttonText": "确认",
+        "inputPlaceholder": "金额数量",
+        "title": "存款",
+        "description": "在这里您可以将钱存入银行.",
+        "type": "number"
+      },
+      {
+        "elementID": "#transfer",
+        "name": "transfer",
+        "buttonText": "转账",
+        "inputPlaceholder": "金额数量",
+        "inputPlaceholder2": "玩家服务器ID",
+        "title": "转账",
+        "description": "在这里您可以将钱转账给他人."
+      },
+      {
+        "componentName": "trans",
+        "elementID": "#third-column",
+        "title": "交易记录",
+        "description": "在这里您可以查看您的交易记录.",
+        "moreHistoryText": "显示更多记录",
+        "moreGraphText": "显示更多图表"
+      },
+      {
+        "componentName": "pincodePanel",
+        "elementID": "#wrapper",
+        "title": "输入 PIN 密码",
+        "deleteButtonText": "<i class='fa-solid fa-ban'></i>",
+        "loginButtonText": "<i class='fa-solid fa-right-to-bracket'></i>",
+        "closeButtonText": "关闭 ❌"
+      },
+      {
+        "componentName": "atmComponent",
+        "elementID": "#wrapper",
+        "title": "花园银行-ATM",
+        "closeButtonText": "注销"
+      }
+    ],
+    "LAUNGAGE": {
+      "your_money_title": "我的信息",
+      "your_money_desc": "在这里您可以看到您当前的余额和现金.",
+      "your_money_cash_label": "您的现金",
+      "your_money_bank_label": "您的银行余额",
+      "withdraw": "提现",
+      "deposit": "存款",
+      "transfer": "转账",
+      "transferReceive": "已收到转账",
+      "moneyFormat": "$__replaceData__",
+      "graphTitle": "您的余额",
+      "moreGraphTitle": "详情页",
+      "moreHistoryTitle": "详情页",
+      "inputErrorTitle": "数据不正确",
+      "inputErrorMessage": "无法为空空或值小于 1",
+      "showPincodeErrorTitle": "输入的 PIN 密码不正确",
+      "showPincodeErrorMessage": "PIN 码必须至少有 4 个字符!",
+      "tableLang": {
+        "typeLabel": "交易类型",
+        "balanceLabel": "我的信息",
+        "amountLabel": "数量",
+        "timeLabel": "时间",
+        "searchInputPlaceholder": "研究 ...",
+        "_comment": "Langue complète: Anglais, Hongrois, Italien, Espagnole Français, vous pouvez trouver ici toutes les langues: https://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/",
+        "tableFullLanguage": "Chinese"
+      }
+    }
   }
 }
