@@ -12,5 +12,5 @@ Locales['it'] = {
     ['not_enough_money'] = "non hai abbastanza soldi! hai bisogno di %s soldi!",
     ['pincode_not_found'] = "codice PIN errato",
     ['pincode_found'] = "codice PIN valido...",
-    ['bank_name'] = "Fleeca Bank",
+    ['bank_name'] = "Banca Fleeca",
 }
