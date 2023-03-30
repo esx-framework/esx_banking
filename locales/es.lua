@@ -10,7 +10,7 @@ Locales['es'] = {
     ['banking_blip']       = 'Banco',
     ['cant_do_it']       = "No puedes permitirte esto!",
     ['not_enough_money'] = "¡No tienes suficiente dinero! Necesitas %s de dinero!",
-    ['pincode_not_found'] = "Código PIN invalido",
+    ['pincode_not_found'] = "Código PIN no válido",
     ['pincode_found'] = "Código PIN válido.. Bienvenido",
     ['bank_name'] = "Fleeca"
   }
