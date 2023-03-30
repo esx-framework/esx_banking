@@ -126,6 +126,7 @@ local playerLoaded, uiActive, inMenu = false, false, false
         atm = atm or false
         SetNuiFocus(state, state)
         inMenu = state
+        ClearPedTasks(PlayerPedId())
         if not state then
             SendNUIMessage({
                 showMenu = false
