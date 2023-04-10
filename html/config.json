@@ -580,7 +580,7 @@
         "timeLabel": "Tijd",
         "searchInputPlaceholder": "Zoeken ...",
         "_comment": "tableFullLanguage options: English, Hungarian, Italian, Spanish, French, you can find here all lang: https://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/",
-        "tableFullLanguage": "Engels"
+        "tableFullLanguage": "Nederlands"
       }
     }
   },
