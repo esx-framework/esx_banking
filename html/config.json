@@ -486,6 +486,105 @@
       }
     }
   },
+  
+    "NL": {
+    "DYNAMIC_FORM_DATA": [
+      {
+        "componentName": "moreGraph",
+        "elementID": "#wrapper",
+        "title": "",
+        "closeButtonText": "Sluit",
+        "bankTitle": "Fleeca Bank",
+        "mainExitButtonText": "Log uit"
+      },
+      {
+        "elementID": "#cpincode",
+        "name": "cpincode",
+        "buttonText": "Goedkeuren",
+        "inputPlaceholder": "Voer 4 cijfers in...",
+        "title": "PINCODE INSTELLEN",
+        "description": "Hier kun je je pincode instellen of wijzigen.",
+        "type": "password"
+      },
+      {
+        "elementID": "#withdraw",
+        "name": "withdraw",
+        "buttonText": "Opnemen",
+        "inputPlaceholder": "Bedrag",
+        "title": "OPNEMEN",
+        "description": "Hier kun je geld opnemen van je bank account.",
+        "type": "number"
+      },
+      {
+        "elementID": "#deposit",
+        "name": "deposit",
+        "buttonText": "Storten",
+        "inputPlaceholder": "Bedrag",
+        "title": "STORTEN",
+        "description": "Hier kun je geld storten op je bank account.",
+        "type": "number"
+      },
+      {
+        "elementID": "#transfer",
+        "name": "transfer",
+        "buttonText": "Overschrijven",
+        "inputPlaceholder": "Bedrag",
+        "inputPlaceholder2": "Speler ID",
+        "title": "OVERSCHRIJVEN",
+        "description": "Hier kun je geld overschrijven naar iemand anders zijn bank account."
+      },
+      {
+        "componentName": "trans",
+        "elementID": "#third-column",
+        "title": "TRANSACTIE GESCHIEDENIS",
+        "description": "Hier kun je alle transacties zien die op je bank account zijn vericht.",
+        "moreHistoryText": "Laat meer geschiedenis zien",
+        "moreGraphText": "Laat meer van de grafiek zien"
+      },
+      {
+        "componentName": "pincodePanel",
+        "elementID": "#wrapper",
+        "title": "Voer pincode in",
+        "deleteButtonText": "<i class='fa-solid fa-ban'></i>",
+        "loginButtonText": "<i class='fa-solid fa-right-to-bracket'></i>",
+        "closeButtonText": "Sluit"
+      },
+      {
+        "componentName": "atmComponent",
+        "elementID": "#wrapper",
+        "title": "Fleeca Bank",
+        "closeButtonText": "Log uit"
+      }
+    ],
+    "LAUNGAGE": {
+      "your_money_title": "Saldo",
+      "your_money_desc": "Hier kun je je saldo en je cash zien.",
+      "your_money_cash_label": "Jouw cash",
+      "your_money_bank_label": "Jouw bank saldo",
+      "withdraw": "OPNEMEN",
+      "deposit": "STORTEN",
+      "transfer": "OVERSCHRIJVEN",
+      "transferReceive": "ONTVANGEN ONVERSCHRIJVING",
+      "moneyFormat": "€__replaceData__",
+      "graphTitle": "Jouw saldo",
+      "moreGraphTitle": "Grote grafiek",
+      "moreHistoryTitle": "Laat meer geschiedenis zien",
+      "inputErrorTitle": "Data is niet correct",
+      "inputErrorMessage": "Deze input kan niet leeg zijn of een waarde minder dan 1 !",
+      "showPincodeErrorTitle": "PIN onjuist",
+      "showPincodeErrorMessage": "Je pincode moet tenminste 4 karakters hebben!",
+      "tableLang": {
+        "typeLabel": "Transactie type",
+        "balanceLabel": "Saldo",
+        "amountLabel": "Bedrag",
+        "timeLabel": "Tijd",
+        "searchInputPlaceholder": "Zoeken ...",
+        "_comment": "tableFullLanguage options: English, Hungarian, Italian, Spanish, French, you can find here all lang: https://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/",
+        "tableFullLanguage": "Nederlands"
+      }
+    }
+  },
+  
     "zh-CN": {
     "DYNAMIC_FORM_DATA": [
       {
