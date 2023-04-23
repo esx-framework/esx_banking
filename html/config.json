@@ -89,6 +89,7 @@
       "showPincodeErrorMessage": "The pin must have at least 4 characters!",
       "tableLang": {
         "typeLabel": "Transaction type",
+        "transactionLabel": "Transaction Label",
         "balanceLabel": "Balance",
         "amountLabel": "Amount",
         "timeLabel": "Time",
@@ -186,6 +187,7 @@
       "showPincodeErrorMessage": "Legalább 4 karakternek kell lennie a pinnek!",
       "tableLang": {
         "typeLabel": "Tranzakció típus",
+        "transactionLabel": "Tranzakció leírása",
         "balanceLabel": "Egyenleged",
         "amountLabel": "Összeg",
         "timeLabel": "Idő",
@@ -283,6 +285,7 @@
       "showPincodeErrorMessage": "Il pin deve contenere almeno 4 caratteri!",
       "tableLang": {
         "typeLabel": "Tipo di transazione",
+        "transactionLabel": "Transaction Label",
         "balanceLabel": "bilancio",
         "amountLabel": "quantità",
         "timeLabel": "tempo",
@@ -380,6 +383,7 @@
       "showPincodeErrorMessage": "El pin debe tener al menos 4 caracteres.",
       "tableLang": {
         "typeLabel": "Tipo de transacción",
+        "transactionLabel": "Transaction Label",
         "balanceLabel": "Saldo",
         "amountLabel": "Importe",
         "timeLabel": "Tiempo",
@@ -477,6 +481,7 @@
       "showPincodeErrorMessage": "Le code PIN doit avoir au moins 4 caractères!",
       "tableLang": {
         "typeLabel": "Type de transaction",
+        "transactionLabel": "Transaction Label",
         "balanceLabel": "Solde",
         "amountLabel": "Montant",
         "timeLabel": "Temps",
@@ -486,8 +491,7 @@
       }
     }
   },
-  
-    "NL": {
+  "NL": {
     "DYNAMIC_FORM_DATA": [
       {
         "componentName": "moreGraph",
@@ -575,6 +579,7 @@
       "showPincodeErrorMessage": "Je pincode moet tenminste 4 karakters hebben!",
       "tableLang": {
         "typeLabel": "Transactie type",
+        "transactionLabel": "Transaction Label",
         "balanceLabel": "Saldo",
         "amountLabel": "Bedrag",
         "timeLabel": "Tijd",
@@ -584,8 +589,7 @@
       }
     }
   },
-  
-    "zh-CN": {
+  "zh-CN": {
     "DYNAMIC_FORM_DATA": [
       {
         "componentName": "moreGraph",
@@ -673,6 +677,7 @@
       "showPincodeErrorMessage": "PIN 码必须至少有 4 个字符!",
       "tableLang": {
         "typeLabel": "交易类型",
+        "transactionLabel": "Transaction Label",
         "balanceLabel": "我的信息",
         "amountLabel": "数量",
         "timeLabel": "时间",

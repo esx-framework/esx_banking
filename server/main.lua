@@ -89,7 +89,7 @@ AddEventHandler('esx_banking:doingType', function(typeData)
             TriggerClientEvent("esx:showNotification", source, TranslateCap(string.format('%s_money', key), typeData.pincode and (string.format("%04d", amount)) or amount), "success")
         end
         if not typeData.pincode then
-            BANK.LogTransaction(source, string.upper(key), amount, bankMoney)
+            BANK.LogTransaction(source,string.upper(key), string.upper(key), amount, bankMoney)
         end
 
         TriggerClientEvent("esx_banking:updateMoneyInUI", source, key, bankMoney, money)
@@ -121,7 +121,7 @@ ESX.RegisterServerCallback("esx_banking:checkPincode", function(source, cb, inpu
     cb(pincode > 0)
 end)
 
-function logTransaction(targetSource,key,amount)
+function logTransaction(targetSource,label, key,amount)
     if targetSource == nil then
         print("ERROR: TargetSource nil!")
         return
@@ -142,16 +142,25 @@ function logTransaction(targetSource,key,amount)
         return
     end
 
+    if label == nil then
+        label = "UNKNOW LABEL"
+    end
+
     local xPlayer = ESX.GetPlayerFromId(tonumber(targetSource))
 
     if xPlayer ~= nil then
         local bankCurrentMoney = xPlayer.getAccount('bank').money
-        BANK.LogTransaction(targetSource, string.upper(key), amount, bankCurrentMoney)  
+        BANK.LogTransaction(targetSource, label, string.upper(key), amount, bankCurrentMoney)  
     else
         print("ERROR: xPlayer is nil!") 
     end
 end
 exports("logTransaction", logTransaction)
+
+RegisterServerEvent('esx_banking:logTransaction')
+AddEventHandler('esx_banking:logTransaction', function(label,key,amount)
+    logTransaction(source,label,key,amount)
+end)
 
 -- bank functions
 BANK = {
@@ -199,14 +208,19 @@ BANK = {
     Pincode = function(amount, identifier)
         MySQL.update('UPDATE users SET pincode = ? WHERE identifier = ? ', {amount, identifier})
     end,
-    LogTransaction = function(playerId, logType, amount, bankMoney)
+    LogTransaction = function(playerId, label, logType, amount, bankMoney)
         if playerId == nil then
             return
         end
+
+        if label == nil then
+            label = logType
+        end
+
         local xPlayer = ESX.GetPlayerFromId(playerId)
         local identifier = xPlayer.getIdentifier()
-
-        MySQL.insert('INSERT INTO banking (identifier, type, amount, time, balance) VALUES (?, ?, ?, ?, ?)',
-            {identifier, logType, amount, os.time() * 1000, bankMoney})
+    
+        MySQL.insert('INSERT INTO banking (identifier, label, type, amount, time, balance) VALUES (?, ?, ?, ?, ?, ?)',
+            {identifier,label,logType,amount, os.time() * 1000, bankMoney})
     end   
 }

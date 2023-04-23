@@ -312,6 +312,7 @@
   justify-content: space-between;
   align-items: center;
   font-size: 1.5vmin;
+  margin-bottom: 0.8vmin;
 }
 
 #menu
@@ -351,6 +352,7 @@
   color: var(--moneyAndTransactionallTitleColorText);
   text-shadow: 0.09vmin 0.09vmin 0.18vmin black;
   font-size: 1.5vmin;
+  width: 25vmin;
 }
 
 .money-container span,
