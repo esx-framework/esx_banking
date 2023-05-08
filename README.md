@@ -29,22 +29,35 @@ ensure esx_banking
 Run the banking.sql into your database. Done.
 ```
 
-# If you want to create a bank log in another script, you can do it this way! Only server side!
+# If you want to create a bank log in another script, you can do it this way!
+# IMPORTANT this is only log, these method not handle full bank service
+# I recommend to use the money logic after.
 ```
-exports["esx_banking"]:logTransaction(source,logType,amount)
+client side
+
+TriggerServerEvent("esx_banking:logTransaction",label,logType,amount)
+
+The list of client-side parameters is the same as the server-side parameters, only the first parameter is different because the client-side has no source.
+
+For example: TriggerServerEvent("esx_banking:logTransaction","TAX", "DEPOSIT", 2000)
+
+server side
+
+exports["esx_banking"]:logTransaction(source,label,logType,amount)
 
 - First param: source - player source
-- Second param: logType - WITHDRAW,DEPOSIT,TRANSFER_RECEIVE  you can only use these log types!
-- Third param: amount - The amount to be logged
+- Second param: label - Only text for example: CAR PURCHASE
+- Third param: logType - WITHDRAW,DEPOSIT,TRANSFER_RECEIVE you can only use these log types!
+- Fourth param: amount - The amount to be logged
 
-For example: exports["esx_banking"]:logTransaction(source,"WITHDRAW",200)
+For example: exports["esx_banking"]:logTransaction(source,"CAR PURCHASE","WITHDRAW",200)
 ```
 
 # Legal
 ### License
 esx_banking - banking script for ESX
 
-Copyright (C) 2022 ESX-Framework
+Copyright (C) 2023 ESX-Framework
 
 This program Is free software: you can redistribute it And/Or modify it under the terms Of the GNU General Public License As published by the Free Software Foundation, either version 3 Of the License, Or (at your option) any later version.
 

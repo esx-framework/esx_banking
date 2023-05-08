@@ -407,7 +407,7 @@ class Render {
       let oneRow = `
 				<div class="transaction-container">
 					<div class="transaction">
-						<h4>${transactionData[i].type}</h4>
+						<h4>${transactionData[i].label || transactionData[i].type}</h4>
 						<span>${Utils.dateFormat(transactionData[i].time)}</span>
 					</div>
 					<span class=${
@@ -825,6 +825,7 @@ $(document).ready(function () {
       updateTransData.unshift({
         time: Utils.dateFormat(new Date()),
         id: new Date().getTime(),
+        label: info.label.toUpperCase(),
         amount: info.amount,
         type: info.label.toUpperCase(),
         balance: data.data.bankMoney,
@@ -855,7 +856,8 @@ $(document).ready(function () {
 		<table id="example" class="display" style="width:100%">
 			<thead>
 				<tr>
-					<th>id</th>	
+					<th>id</th>
+          <th>label</th>
 					<th>type</th>
 					<th>balance</th>
 					<th>amount</th>
@@ -868,6 +870,7 @@ $(document).ready(function () {
       data: transactionData.getStoredData(),
       columns: [
         { data: "id" },
+        { data: "label", title: lang.tableLang.transactionLabel },
         { data: "type", title: lang.tableLang.typeLabel },
         { data: "balance", title: lang.tableLang.balanceLabel },
         { data: "amount", title: lang.tableLang.amountLabel },
@@ -880,24 +883,24 @@ $(document).ready(function () {
           searchable: false,
         },
         {
-          target: 4,
+          target: 5,
           orderable: false,
         },
       ],
       createdRow: function (row, data, index) {
         let parseType = data.type.replace(/[\$,]/g, "");
-        $("td", row).eq(1).text(`$${data.balance}`);
+        $("td", row).eq(2).text(`$${data.balance}`);
         if (parseType == lang.deposit || parseType == lang.transferReceive) {
-          $("td", row).eq(2).addClass("greenTableText");
+          $("td", row).eq(3).addClass("greenTableText");
           $("td", row)
-            .eq(2)
+            .eq(3)
             .html(
               `+${lang.moneyFormat.replace("__replaceData__", data.amount)}`
             );
         } else if (parseType == lang.withdraw || parseType == lang.transfer) {
-          $("td", row).eq(2).addClass("redTableText");
+          $("td", row).eq(3).addClass("redTableText");
           $("td", row)
-            .eq(2)
+            .eq(3)
             .html(
               `-${lang.moneyFormat.replace("__replaceData__", data.amount)}`
             );
