@@ -686,5 +686,102 @@
         "tableFullLanguage": "Chinese"
       }
     }
+  },
+  "SR": {
+    "DYNAMIC_FORM_DATA": [
+      {
+        "componentName": "moreGraph",
+        "elementID": "#wrapper",
+        "title": "",
+        "closeButtonText": "Zatvori",
+        "bankTitle": "Fleeca Banka",
+        "mainExitButtonText": "Log out"
+      },
+      {
+        "elementID": "#cpincode",
+        "name": "cpincode",
+        "buttonText": "Potvrdi",
+        "inputPlaceholder": "Unesi 4 cifre...",
+        "title": "PIN KOD",
+        "description": "Ovde možete postaviti ili izmeniti PIN kod.",
+        "type": "password"
+      },
+      {
+        "elementID": "#withdraw",
+        "name": "withdraw",
+        "buttonText": "Potvrdi",
+        "inputPlaceholder": "Iznos",
+        "title": "PODIGNI",
+        "description": "Ovde možete podići novac sa vašeg računa.",
+        "type": "number"
+      },
+      {
+        "elementID": "#deposit",
+        "name": "deposit",
+        "buttonText": "Potvrdi",
+        "inputPlaceholder": "Iznos",
+        "title": "UPLATA",
+        "description": "Ovde možete uplatiti novac na vaš račun",
+        "type": "number"
+      },
+      {
+        "elementID": "#transfer",
+        "name": "transfer",
+        "buttonText": "Transfer",
+        "inputPlaceholder": "Iznos",
+        "inputPlaceholder2": "ID Osobe",
+        "title": "TRANSFER",
+        "description": "Ovde možete poslati novac nekome."
+      },
+      {
+        "componentName": "trans",
+        "elementID": "#third-column",
+        "title": "ISTORIJA TRANSAKCIJA",
+        "description": "Ovde možete videti istoriju transakcija.",
+        "moreHistoryText": "Prikaži više",
+        "moreGraphText": "Prikaži više grafikona"
+      },
+      {
+        "componentName": "pincodePanel",
+        "elementID": "#wrapper",
+        "title": "Unesite PIN",
+        "deleteButtonText": "<i class='fa-solid fa-ban'></i>",
+        "loginButtonText": "<i class='fa-solid fa-right-to-bracket'></i>",
+        "closeButtonText": "Zatvori"
+      },
+      {
+        "componentName": "atmComponent",
+        "elementID": "#wrapper",
+        "title": "Fleeca Banka",
+        "closeButtonText": "Log out"
+      }
+    ],
+    "LAUNGAGE": {
+      "your_money_title": "Balans",
+      "your_money_desc": "Ovde možete videti iznos novca na vašem računu i kod vas",
+      "your_money_cash_label": "Vaš novac",
+      "your_money_bank_label": "Vaš novac na računu",
+      "withdraw": "PODIGNI",
+      "deposit": "UPLATI",
+      "transfer": "TRANSFER",
+      "transferReceive": "PRIMLJEN TRANSFER",
+      "moneyFormat": "$__replaceData__",
+      "graphTitle": "Vaš balansa",
+      "moreGraphTitle": "Veliki Grafikon",
+      "moreHistoryTitle": "Prikaži više",
+      "inputErrorTitle": "Podaci su nevažeći",
+      "inputErrorMessage": "Ne može biti prazno ili iznos manji od 1!",
+      "showPincodeErrorTitle": "PIN netačan",
+      "showPincodeErrorMessage": "PIN mora imati 4 karaktera!",
+      "tableLang": {
+        "typeLabel": "Tip transakcije",
+        "balanceLabel": "Balans",
+        "amountLabel": "Iznos",
+        "timeLabel": "Vreme",
+        "searchInputPlaceholder": "Pretraži ...",
+        "_comment": "tableFullLanguage options: English, Hungarian, Italian, Spanish, French, Serbian, you can find here all lang: https://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/",
+        "tableFullLanguage": "Serbian"
+      }
+    }
   }
 }
