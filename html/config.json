@@ -486,7 +486,7 @@
         "amountLabel": "Montant",
         "timeLabel": "Temps",
         "searchInputPlaceholder": "Rechercher ...",
-        "_comment": "Langue complète: Anglais, Hongrois, Italien, Espagnole Français, vous pouvez trouver ici toutes les langues: https://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/",
+        "_comment": "Langue complète: Anglais, Hongrois, Italien, Espagnole, Français, vous pouvez trouver ici toutes les langues: https://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/",
         "tableFullLanguage": "French"
       }
     }
