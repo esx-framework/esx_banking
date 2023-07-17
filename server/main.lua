@@ -182,7 +182,7 @@ BANK = {
         end
 
         Wait(100)
-        TriggerClientEvent('esx_banking:PedHandler', -1, netIdTable)
+        TriggerClientEvent('esx_banking:pedHandler', -1, netIdTable)
     end,
     DeletePeds = function()
         for i = 1, #spawnedPeds do
