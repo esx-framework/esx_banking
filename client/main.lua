@@ -181,7 +181,7 @@ RegisterNetEvent('esx_banking:closebanking', function()
     BANK:HandleUi(false)
 end)
 
-RegisterNetEvent('esx_banking:pedHandler', function(netIdTable)
+RegisterNetEvent('esx_banking:PedHandler', function(netIdTable)
     for i = 1, #netIdTable do
         BANK:LoadNpc(i, netIdTable[i])
     end
