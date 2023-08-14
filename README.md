@@ -32,25 +32,31 @@ Run the banking.sql into your database. Done.
 # If you want to create a bank log in another script, you can do it this way!
 # IMPORTANT this is only log, these method not handle full bank service
 # I recommend to use the money logic after.
-```
-client side
+
+|Param |Type |Explanation|
+|-----|--------|--------|
+|source|number   | the source of the player (server side only)   |
+|label  |string     |The label of the transaction |
+|logType  |string     | "WITHDRAW", "DEPOSIT", "TRANSFER_RECEIVE" the possible transactions|
+|amount  |number     |The amount of the transaction to be logged|
+
+
+```lua
+-- Client side
+-- The event is used client side
 
 TriggerServerEvent("esx_banking:logTransaction",label,logType,amount)
 
-The list of client-side parameters is the same as the server-side parameters, only the first parameter is different because the client-side has no source.
+-- For example:
+TriggerServerEvent("esx_banking:logTransaction","TAX", "DEPOSIT", 2000)
 
-For example: TriggerServerEvent("esx_banking:logTransaction","TAX", "DEPOSIT", 2000)
 
-server side
-
+-- Server side
+-- The export is used server side
 exports["esx_banking"]:logTransaction(source,label,logType,amount)
 
-- First param: source - player source
-- Second param: label - Only text for example: CAR PURCHASE
-- Third param: logType - WITHDRAW,DEPOSIT,TRANSFER_RECEIVE you can only use these log types!
-- Fourth param: amount - The amount to be logged
-
-For example: exports["esx_banking"]:logTransaction(source,"CAR PURCHASE","WITHDRAW",200)
+-- For example:
+exports["esx_banking"]:logTransaction(source,"CAR PURCHASE","WITHDRAW",200)
 ```
 
 # Legal
