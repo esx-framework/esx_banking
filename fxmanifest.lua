@@ -2,7 +2,7 @@ fx_version 'cerulean'
 
 game 'gta5'
 
-description 'ESX banking'
+description 'A banking system that adds interactable banks and ATMs'
 lua54 'yes'
 version '1.0.1'
 legacyversion '1.9.1'
