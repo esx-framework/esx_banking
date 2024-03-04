@@ -99,6 +99,104 @@
       }
     }
   },
+  "DE": {
+    "DYNAMIC_FORM_DATA": [
+      {
+        "componentName": "moreGraph",
+        "elementID": "#wrapper",
+        "title": "",
+        "closeButtonText": "Schließen",
+        "bankTitle": "Fleeca Bank",
+        "mainExitButtonText": "Abmelden"
+      },
+      {
+        "elementID": "#cpincode",
+        "name": "cpincode",
+        "buttonText": "Zustimmen",
+        "inputPlaceholder": "4 Ziffern eingeben...",
+        "title": "PIN-CODE EINRICHTEN",
+        "description": "Hier kannst du den PIN-Code einstellen oder ändern.",
+        "type": "password"
+      },
+      {
+        "elementID": "#withdraw",
+        "name": "withdraw",
+        "buttonText": "Zustimmen",
+        "inputPlaceholder": "Betrag",
+        "title": "ABHEBEN",
+        "description": "Hier kannst du dein Geld bei der Bank abheben.",
+        "type": "number"
+      },
+      {
+        "elementID": "#deposit",
+        "name": "deposit",
+        "buttonText": "Zustimmen",
+        "inputPlaceholder": "Amount",
+        "title": "EINZAHLEN",
+        "description": "Hier kannst du dein Geld bei der Bank einzahlen.",
+        "type": "number"
+      },
+      {
+        "elementID": "#transfer",
+        "name": "transfer",
+        "buttonText": "Überweisung",
+        "inputPlaceholder": "Betrag",
+        "inputPlaceholder2": "Spieler ID",
+        "title": "ÜBERWEISUNG",
+        "description": "Hier kannst du dein Geld an eine andere Person überweisen."
+      },
+      {
+        "componentName": "trans",
+        "elementID": "#third-column",
+        "title": "TRANSAKTIONSVERLAUF",
+        "description": "Hier kannst du deinen Transaktionsverlauf einsehen.",
+        "moreHistoryText": "Mehr Informationen anzeigen",
+        "moreGraphText": "Mehr Grafik anzeigen"
+      },
+      {
+        "componentName": "pincodePanel",
+        "elementID": "#wrapper",
+        "title": "PIN Eingeben",
+        "deleteButtonText": "<i class='fa-solid fa-ban'></i>",
+        "loginButtonText": "<i class='fa-solid fa-right-to-bracket'></i>",
+        "closeButtonText": "Schließen"
+      },
+      {
+        "componentName": "atmComponent",
+        "elementID": "#wrapper",
+        "title": "Fleeca Bank",
+        "closeButtonText": "Abmelden"
+      }
+    ],
+    "LAUNGAGE": {
+      "your_money_title": "Saldo",
+      "your_money_desc": "Hier kannst du deinen aktuellen Kontostand und dein Bargeld sehen.",
+      "your_money_cash_label": "Dein Bargeld",
+      "your_money_bank_label": "Dein Kontostand",
+      "withdraw": "ABHEBEN",
+      "deposit": "EINZAHLEN",
+      "transfer": "ÜBERWEISUNG",
+      "transferReceive": "EMPFANGENE ÜBERWEISUNG",
+      "moneyFormat": "$__replaceData__",
+      "graphTitle": "Dein Guthaben",
+      "moreGraphTitle": "Große Grafik",
+      "moreHistoryTitle": "Mehr Informationen anzeigen",
+      "inputErrorTitle": "Daten sind falsch",
+      "inputErrorMessage": "Er darf nicht leer sein oder einen Wert kleiner als 1 haben!",
+      "showPincodeErrorTitle": "PIN falsch",
+      "showPincodeErrorMessage": "Der Pin muss mindestens 4 Zeichen haben!",
+      "tableLang": {
+        "typeLabel": "Transaktionsart",
+        "transactionLabel": "Transaktion Label",
+        "balanceLabel": "Saldo",
+        "amountLabel": "Betrag",
+        "timeLabel": "Zeit",
+        "searchInputPlaceholder": "Suche ...",
+        "_comment": "tableFullLanguage options: English, German, Hungarian, Italian, Spanish, French, you can find here all lang: https://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/",
+        "tableFullLanguage": "English"
+      }
+    }
+  },
   "HU": {
     "DYNAMIC_FORM_DATA": [
       {
