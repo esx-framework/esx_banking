@@ -115,7 +115,7 @@
         "buttonText": "Zustimmen",
         "inputPlaceholder": "4 Ziffern eingeben...",
         "title": "PIN-CODE EINRICHTEN",
-        "description": "Hier kannst du den PIN-Code einstellen oder ändern.",
+        "description": "Hier kannst du deinen Pin einstellen oder ändern.",
         "type": "password"
       },
       {
@@ -131,7 +131,7 @@
         "elementID": "#deposit",
         "name": "deposit",
         "buttonText": "Zustimmen",
-        "inputPlaceholder": "Amount",
+        "inputPlaceholder": "Betrag",
         "title": "EINZAHLEN",
         "description": "Hier kannst du dein Geld bei der Bank einzahlen.",
         "type": "number"
@@ -143,7 +143,7 @@
         "inputPlaceholder": "Betrag",
         "inputPlaceholder2": "Spieler ID",
         "title": "ÜBERWEISUNG",
-        "description": "Hier kannst du dein Geld an eine andere Person überweisen."
+        "description": "Hier kannst du dein Geld an eine anderen Person überweisen."
       },
       {
         "componentName": "trans",
@@ -151,7 +151,7 @@
         "title": "TRANSAKTIONSVERLAUF",
         "description": "Hier kannst du deinen Transaktionsverlauf einsehen.",
         "moreHistoryText": "Mehr Informationen anzeigen",
-        "moreGraphText": "Mehr Grafik anzeigen"
+        "moreGraphText": "Mehr Grafiken anzeigen"
       },
       {
         "componentName": "pincodePanel",
@@ -169,31 +169,31 @@
       }
     ],
     "LAUNGAGE": {
-      "your_money_title": "Saldo",
-      "your_money_desc": "Hier kannst du deinen aktuellen Kontostand und dein Bargeld sehen.",
+      "your_money_title": "Kontostand",
+      "your_money_desc": "Hier kannst du deinen aktuellen Kontostand und dein Bargeld einsehen.",
       "your_money_cash_label": "Dein Bargeld",
       "your_money_bank_label": "Dein Kontostand",
       "withdraw": "ABHEBEN",
       "deposit": "EINZAHLEN",
       "transfer": "ÜBERWEISUNG",
-      "transferReceive": "EMPFANGENE ÜBERWEISUNG",
+      "transferReceive": "EMPFANGENE ÜBERWEISUNGEN",
       "moneyFormat": "$__replaceData__",
       "graphTitle": "Dein Guthaben",
-      "moreGraphTitle": "Große Grafik",
+      "moreGraphTitle": "Detailliertere Grafik",
       "moreHistoryTitle": "Mehr Informationen anzeigen",
-      "inputErrorTitle": "Daten sind falsch",
-      "inputErrorMessage": "Er darf nicht leer sein oder einen Wert kleiner als 1 haben!",
-      "showPincodeErrorTitle": "PIN falsch",
-      "showPincodeErrorMessage": "Der Pin muss mindestens 4 Zeichen haben!",
+      "inputErrorTitle": "Die angegebenen Daten sind falsch",
+      "inputErrorMessage": "Der Wert darf nicht leer oder kleiner als 1 sein!",
+      "showPincodeErrorTitle": "Pin falsch",
+      "showPincodeErrorMessage": "Der Pin muss mindestens 4 Zahlen haben!",
       "tableLang": {
         "typeLabel": "Transaktionsart",
-        "transactionLabel": "Transaktion Label",
-        "balanceLabel": "Saldo",
+        "transactionLabel": "Transaktion",
+        "balanceLabel": "Kontostand",
         "amountLabel": "Betrag",
         "timeLabel": "Zeit",
         "searchInputPlaceholder": "Suche ...",
         "_comment": "tableFullLanguage options: English, German, Hungarian, Italian, Spanish, French, you can find here all lang: https://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/",
-        "tableFullLanguage": "English"
+        "tableFullLanguage": "German"
       }
     }
   },
