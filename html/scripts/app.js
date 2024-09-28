@@ -718,6 +718,16 @@ $(document).ready(function () {
     pincode.show();
   }
 
+  function handleTransactionLabel(label, languageText){
+    const defaultLabelList = {
+      WITHDRAW: languageText.withdraw,
+      DEPOSIT: languageText.deposit,
+      TRANSFER_RECEIVE: languageText.transferReceive
+    }
+
+    return defaultLabelList[label.toUpperCase()] ?? label ?? languageText.transfer
+  }
+
   $(document).on("click", ".pincode-numbers div", function () {
     if (pincode.getPincode().length + 1 == 4) {
       $(".pincode-numbers div:nth-child(12)").removeClass("disable-button");
@@ -766,6 +776,8 @@ $(document).ready(function () {
       transData.map((trans) => {
         trans.id = trans.time;
         trans.time = Utils.dateFormat(trans.time);
+        const currentLabel = handleTransactionLabel(trans.label, languageText)
+        trans.label = currentLabel;
         switch (trans.type) {
           case "WITHDRAW":
             trans.type = languageText.withdraw;
